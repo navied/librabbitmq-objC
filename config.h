@@ -1,17 +1,29 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define to 1 for a Win32 build. */
+/* #undef AMQP_BUILD */
+
+/* Define to 1 for a static Win32 build. */
+/* #undef AMQP_STATIC */
+
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #define HAVE_DLFCN_H 1
+
+/* Define to 1 if you have the `htonll' function. */
+/* #undef HAVE_HTONLL */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
-/* Define if you have libpopt */
-/* #undef HAVE_LIBPOPT */
-
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
+
+/* Define to 1 if Popt is available. */
+/* #undef HAVE_POPT */
+
+/* Define to 1 if you have the <popt.h> header file. */
+/* #undef HAVE_POPT_H */
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
@@ -38,26 +50,29 @@
    */
 #define LT_OBJDIR ".libs/"
 
+/* Define to 1 for Win32. */
+/* #undef OS_WIN32 */
+
 /* Name of package */
 #define PACKAGE "librabbitmq"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "tonyg@rabbitmq.com"
+#define PACKAGE_BUGREPORT "https://github.com/alanxz/rabbitmq-c/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "librabbitmq"
+#define PACKAGE_NAME "rabbitmq-c"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "librabbitmq 0.0.1"
+#define PACKAGE_STRING "rabbitmq-c 0.3.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "librabbitmq"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL ""
+#define PACKAGE_URL "http://www.rabbitmq.com/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.0.1"
+#define PACKAGE_VERSION "0.3.0"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
@@ -85,10 +100,7 @@
 
 
 /* Version number of package */
-#define VERSION "0.0.1"
-
-/* Define to 1 if on Windows. */
-/* #undef WINDOWS */
+#define VERSION "0.3.0"
 
 /* Define to 1 if on MINIX. */
 /* #undef _MINIX */
@@ -99,3 +111,9 @@
 
 /* Define to 1 if you need to in order for `stat' and other things to work. */
 /* #undef _POSIX_SOURCE */
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+/* #undef inline */
+#endif

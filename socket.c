@@ -18,11 +18,11 @@
 int amqp_socket_socket(int domain, int type, int proto)
 {
 	int flags;
-
+    
 	int s = socket(domain, type, proto);
 	if (s < 0)
 		return s;
-
+    
 	/* Always enable CLOEXEC on the socket */
 	flags = fcntl(s, F_GETFD);
 	if (flags == -1
@@ -32,9 +32,9 @@ int amqp_socket_socket(int domain, int type, int proto)
 		errno = e;
 		return -1;
 	}
-
+    
 	return s;
-}	
+}
 
 char *amqp_os_error_string(int err)
 {
